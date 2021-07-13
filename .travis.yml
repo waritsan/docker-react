@@ -3,4 +3,4 @@ services:
 before_install:
   - docker build -t waritsan/docker-react -f Dockerfile.dev .
 script:
-  - docker run waritsan/docker-react npm run test
+  - docker run -e CI=true waritsan/docker-react npm run test
