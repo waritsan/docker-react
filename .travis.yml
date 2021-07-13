@@ -6,10 +6,8 @@ script:
   - docker run -e CI=true waritsan/docker-react npm run test
 deploy:
   provider: elasticbeanstalk
-  access-key-id: 
-    secure: AWS_ACCESS_KEY
-  secret-access-key: 
-    secure: AWS_SECRET_KEY
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
   region: "us-east-2"
   app: "docker-react"
   env: "Dockerreact-env"
